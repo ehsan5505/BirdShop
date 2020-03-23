@@ -28,7 +28,7 @@ class Directory extends React.Component {
                 {
                     id:4,
                     title: 'Birds',
-                    imageUrl: 'https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Cockatiel-2-300x300.jpg'
+                    imageUrl: 'https://cache.desktopnexus.com/thumbseg/2351/2351311-bigthumbnail.jpg'
                 },
                 {
                     id:5,
