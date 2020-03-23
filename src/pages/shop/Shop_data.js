@@ -1,4 +1,4 @@
-const SHOP_DATA = 
+const SHOP_DATA = [
     {
         id:1,
         title:'Medicines',
@@ -22,7 +22,8 @@ const SHOP_DATA =
                 imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDNtP9P-ZgkdznhQ_272CgY-JGIuuXxDHW2m334THdsTBZYpTG',
                 price:"110.23"
             }
-        ],
+        ]
+    },{
         id:2,
         title:'Feed',
         routeName:'feed',
@@ -51,7 +52,8 @@ const SHOP_DATA =
                 imageUrl:"https://www.welzhofer.eu/content/cache/productcategory/25/0a4/19c25718e603165b/mischfutter-3d-livo-3000px-cmyk_c_01.png",
                 price:"400"
             }
-        ],
+        ]
+    },{
         id:3,
         title:"Cages",
         routeName:"cage",
@@ -80,7 +82,8 @@ const SHOP_DATA =
                 imageUrl:"https://images.prod.meredith.com/product/1a28e279ef08c503509be7be31355d80/1519338454879/l/walk-in-iron-aviary-large-bird-cage-heavy-duty-pet-parrots-poultry-house-brown",
                 price:18250
             }
-        ],
+        ]
+    },{
         id:4,
         title:"Birds",
         routeName:"bird",
@@ -109,7 +112,8 @@ const SHOP_DATA =
                 imageUrl:"https://tajbirds.com/wp-content/uploads/2019/10/lutino-cockatiel-parrot.jpg",
                 price:"3570"
             }
-        ],
+        ]
+    },{
         id:5,
         title: "Pets",
         routeName: "pet",
@@ -139,7 +143,7 @@ const SHOP_DATA =
                 price:1830
             }
         ]
-
-    };
+    }
+];
 
 export default SHOP_DATA;
