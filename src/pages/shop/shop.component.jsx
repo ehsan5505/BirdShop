@@ -2,7 +2,6 @@ import React from 'react';
 import SHOP_DATA from './Shop_data.js';
 
 import CollectionPreview from '../../components/collection-preview/collection-preview.component';
-import { createPortal } from 'react-dom';
 
 
 
