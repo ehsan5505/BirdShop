@@ -1,7 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import { user } from 'firebase-functions/lib/providers/auth';
 
 const config = {
     apiKey: "AIzaSyDXX0YI7lNtTDCvWWAvEjHLD_PPgF4d0as",
@@ -29,7 +28,7 @@ export const createUserProfileDocument = async(userAuth,additionalComment) => {
   if(!snapShot.exists){
     // fetch the necessary info
     const {displayName,email} = userAuth;
-    const createdAt = new Date;
+    const createdAt = new Date();
 
     try{
       await userRef.set({
