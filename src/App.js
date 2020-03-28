@@ -6,14 +6,8 @@ import ShopPage from './pages/shop/shop.component';
 import Header from './components/header/header.component';
 import SignInSignOut from './pages/register/sign-in-sign-out.components';
 import { auth } from './firebase/firebase.utils';
-
 import './App.css';
 
-// const Test = () => (
-//   <div>
-//     <h1>Just a test for the Router</h1>
-//   </div>
-// )
 
 class App extends React.Component {
 
@@ -28,7 +22,7 @@ class App extends React.Component {
   unsubscribedAuthUser = null;
 
   componentDidMount(){
-    unsubscribedAuthUser=auth.onAuthStateChanged(user => {
+    this.unsubscribedAuthUser=auth.onAuthStateChanged(user => {
       this.setState({currentUser:user})
       console.log(user);
     })
@@ -41,7 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div> 
-        <Header/>
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact='true' path='/' component={HomePage} />
           <Route exact="true" path="/shop" component={ShopPage} />
