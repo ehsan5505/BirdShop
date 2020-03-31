@@ -9,6 +9,11 @@ export const selectCartItems = createSelector(
     (cart) => cart.cartItems // output we want (from cart we only need cartItems)
 );
 
+export const selectCartHidden = createSelector(
+    [selectCart],
+    (cart) => cart.hidden
+);
+
 export const selectCartItemsCount = createSelector(
     [selectCartItems], // use existing created selector
     cartItems => cartItems.reduce( // output we want
@@ -16,3 +21,4 @@ export const selectCartItemsCount = createSelector(
         0
       )
 );
+
