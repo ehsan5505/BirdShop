@@ -27,7 +27,6 @@ import StripeCheckout from 'react-stripe-checkout';
 //   );
 // };
 
-
 const StripeCheckoutButton = ({price}) => {
     const priceForStripe = price * 100;
     const apiKey = "pk_test_E72jCY4vZP03CWKPvVpzhH7U00dyLaPLTA";
@@ -45,6 +44,7 @@ const StripeCheckoutButton = ({price}) => {
             shippingAddress
             currency="PKR"
             locale="PK"
+            image="`{'../../assets/elite.svg'}`"
             panelLabe="Process the Payment"
             amount={priceForStripe}
             stripeKey={apiKey}
