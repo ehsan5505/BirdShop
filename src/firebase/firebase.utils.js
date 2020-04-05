@@ -1,9 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import { object } from 'firebase-functions/lib/providers/storage';
-import { addItem } from '../redux/cart/cart.actions';
-import { findAllByTitle } from '@testing-library/react';
 
 const config = {
   apiKey: "AIzaSyDXX0YI7lNtTDCvWWAvEjHLD_PPgF4d0as",
