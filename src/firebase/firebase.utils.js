@@ -77,7 +77,11 @@ export const GetCollectionSnapshot = (collectionSnapshot) => {
       items
     };
   })
-  console.error(transformedCollection);
+  // console.error(transformedCollection);
+  return transformedCollection.reduce((accumlator,collection) => {
+    accumlator[collection.title.toLowerCase().slice(0,4)] = collection;
+    return accumlator;
+  },{})
 }
 
 const provider = new firebase.auth.GoogleAuthProvider();

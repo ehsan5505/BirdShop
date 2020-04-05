@@ -43,8 +43,9 @@ const StripeCheckoutButton = ({price}) => {
             billingAddress
             shippingAddress
             currency="PKR"
-            locale="PK"
-            image="`{'../../assets/elite.svg'}`"
+            locale="en"
+            // image="`{'../../assets/elite.svg'}`"
+            // image='${../../assets/elite.svg}'
             panelLabe="Process the Payment"
             amount={priceForStripe}
             stripeKey={apiKey}
