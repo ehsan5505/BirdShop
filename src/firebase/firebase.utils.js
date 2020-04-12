@@ -75,15 +75,15 @@ export const GetCollectionSnapshot = (collectionSnapshot) => {
     };
   })
   // console.error(transformedCollection);
-  return transformedCollection.reduce((accumlator,collection) => {
-    accumlator[collection.title.toLowerCase().slice(0,4)] = collection;
+  return transformedCollection.reduce((accumlator, collection) => {
+    accumlator[collection.title.toLowerCase().slice(0, 4)] = collection;
     return accumlator;
-  },{})
+  }, {})
 }
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ 'prompt': 'select_account' });
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+googleProvider.setCustomParameters({ 'prompt': 'select_account' });
 
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;
