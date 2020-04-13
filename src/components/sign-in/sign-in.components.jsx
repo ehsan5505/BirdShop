@@ -2,15 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
-// import CustomButton from '../custom-button/custom-button.component';
 import {
   googleSignInStart,
   emailSignInStart
 } from "./../../redux/user/user.actions";
 
 import "./sign-in.styles.scss";
-
-import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -28,13 +25,7 @@ class SignIn extends React.Component {
     const { emailSignInStart } = this.props;
     const { email, password } = this.state;
 
-    emailSignInStart(email,password);
-    // try {
-    //   await auth.signInWithEmailAndPassword(email, password);
-    //   this.setState({ email: "", password: "" });
-    // } catch (error) {
-    //   console.error(error.message);
-    // }
+    emailSignInStart(email, password);
   };
 
   handleChange = event => {

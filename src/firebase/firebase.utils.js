@@ -47,6 +47,15 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
 }
 
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubsribe = auth.onAuthStateChanged(userAuth => {
+      unsubsribe();
+      resolve(userAuth);
+    }, reject)
+  })
+};
+
 export const UploadCollectionAndDocuments = async (collectionId, objectsToAdd) => {
   const collectionRef = firestore.collection(collectionId);
   // console.info(collectionRef);
